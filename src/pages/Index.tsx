@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Phone, Mail, MapPin, Clock, Shield, Bot, Users } from 'lucide-react';
+import ThemeToggle from '@/components/ThemeToggle';
 import heroImage from '@/assets/dental-hero.jpg';
 
 const Index = () => {
@@ -33,6 +34,7 @@ const Index = () => {
                 <Mail className="w-4 h-4" />
                 <span>contact@sante-plus.be</span>
               </div>
+              <ThemeToggle />
             </div>
           </div>
         </div>
