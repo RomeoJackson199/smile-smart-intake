@@ -92,10 +92,12 @@ const Index = () => {
 
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={heroImage} 
-                  alt="Cabinet dentaire moderne" 
+                <img
+                  src={heroImage}
+                  alt="Cabinet dentaire moderne"
                   className="w-full h-96 object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border">
