@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Phone, Mail, MapPin, Clock, Shield, Bot, Users } from 'lucide-react';
-import ThemeToggle from '@/components/ThemeToggle';
 import heroImage from '@/assets/dental-hero.jpg';
 
 const Index = () => {
@@ -10,35 +9,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-medical-blue rounded-lg flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-medical-blue">Cabinet Dentaire Santé+</h1>
-                <p className="text-sm text-muted-foreground">Soins dentaires modernes</p>
-              </div>
-            </div>
-            <div className="hidden md:flex items-center space-x-4 text-sm">
-              <div className="flex items-center space-x-1 text-muted-foreground">
-                <Phone className="w-4 h-4" />
-                <span>+32 2 123 45 67</span>
-              </div>
-              <div className="flex items-center space-x-1 text-muted-foreground">
-                <Mail className="w-4 h-4" />
-                <span>contact@sante-plus.be</span>
-              </div>
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -61,7 +31,7 @@ const Index = () => {
                   size="lg"
                   className="bg-medical-blue hover:bg-medical-blue/90 text-lg px-8 py-6 rounded-xl"
                 >
-                  <Bot className="w-5 h-5 mr-2" />
+                  <Bot className="w-5 h-5 mr-2" aria-hidden="true" />
                   Commencer ma consultation
                 </Button>
                 <Button 
@@ -69,22 +39,22 @@ const Index = () => {
                   size="lg"
                   className="text-lg px-8 py-6 rounded-xl border-medical-blue text-medical-blue hover:bg-medical-blue/5"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2" aria-hidden="true" />
                   Appeler maintenant
                 </Button>
               </div>
 
               <div className="flex items-center space-x-6 text-sm text-muted-foreground">
                 <div className="flex items-center space-x-2">
-                  <Shield className="w-4 h-4 text-medical-green" />
+                  <Shield className="w-4 h-4 text-medical-green" aria-hidden="true" />
                   <span>Conforme RGPD</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4 text-medical-green" />
+                  <Clock className="w-4 h-4 text-medical-green" aria-hidden="true" />
                   <span>Réponse rapide</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Users className="w-4 h-4 text-medical-green" />
+                  <Users className="w-4 h-4 text-medical-green" aria-hidden="true" />
                   <span>Équipe experte</span>
                 </div>
               </div>
@@ -92,16 +62,16 @@ const Index = () => {
 
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={heroImage} 
-                  alt="Cabinet dentaire moderne" 
-                  className="w-full h-96 object-cover"
+                <img
+                  src={heroImage}
+                  alt="Salle de traitement dentaire moderne"
+                  className="w-full h-64 md:h-96 object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-medical-green rounded-full flex items-center justify-center">
-                    <Bot className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-medical-green rounded-full flex items-center justify-center" aria-hidden="true">
+                    <Bot className="w-6 h-6 text-white" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="font-semibold text-medical-blue">Assistant IA</p>
@@ -130,8 +100,8 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-medical-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Bot className="w-8 h-8 text-medical-blue" />
+                <div className="w-16 h-16 bg-medical-blue/10 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                  <Bot className="w-8 h-8 text-medical-blue" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-semibold text-medical-blue mb-2">
                   Assistant IA
@@ -145,8 +115,8 @@ const Index = () => {
 
             <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-medical-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-medical-green" />
+                <div className="w-16 h-16 bg-medical-green/10 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                  <Clock className="w-8 h-8 text-medical-green" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-semibold text-medical-blue mb-2">
                   Prise en charge rapide
@@ -160,8 +130,8 @@ const Index = () => {
 
             <Card className="border-0 shadow-md hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-medical-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-medical-blue" />
+                <div className="w-16 h-16 bg-medical-blue/10 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                  <Shield className="w-8 h-8 text-medical-blue" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-semibold text-medical-blue mb-2">
                   Confidentialité assurée
@@ -182,7 +152,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-medical-blue rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-medical-blue rounded-lg flex items-center justify-center" aria-hidden="true">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
@@ -199,15 +169,15 @@ const Index = () => {
               <h3 className="font-semibold text-medical-blue mb-4">Contact</h3>
               <div className="space-y-2 text-muted-foreground">
                 <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4" />
+                  <MapPin className="w-4 h-4" aria-hidden="true" />
                   <span>Rue de la Santé 123, 1000 Bruxelles</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4" aria-hidden="true" />
                   <span>+32 2 123 45 67</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4" aria-hidden="true" />
                   <span>contact@sante-plus.be</span>
                 </div>
               </div>

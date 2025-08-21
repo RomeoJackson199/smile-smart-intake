@@ -8,7 +8,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, ArrowLeft } from 'lucide-react';
-import ThemeToggle from '@/components/ThemeToggle';
 import { useToast } from '@/hooks/use-toast';
 
 interface IntakeFormData {
@@ -119,7 +118,7 @@ const Intake = () => {
               variant="outline"
               className="mt-4"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2" aria-hidden="true" />
               Retour à l'accueil
             </Button>
           </CardContent>
@@ -132,13 +131,6 @@ const Intake = () => {
     <div className="min-h-screen bg-medical-light">
       <div className="container mx-auto py-8 px-4">
         <div className="mb-8">
-          <div className="flex items-center justify-between mb-4">
-            <Button onClick={() => navigate('/')} variant="ghost">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Retour
-            </Button>
-            <ThemeToggle />
-          </div>
           <h1 className="text-3xl font-bold text-medical-blue mb-2">
             Formulaire de consultation
           </h1>
@@ -278,7 +270,7 @@ const Intake = () => {
               >
                 {loading ? (
                   <>
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" aria-hidden="true" />
                     Envoi en cours...
                   </>
                 ) : (
