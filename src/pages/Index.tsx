@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Phone, Mail, MapPin, Clock, Shield, Bot, Users } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
-import heroImage from '@/assets/dental-hero.jpg';
+import heroImage from '@/assets/dental-hero.svg';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <header className="border-b bg-background/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -98,7 +98,7 @@ const Index = () => {
                   className="w-full h-96 object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border">
+              <div className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl shadow-lg border">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-medical-green rounded-full flex items-center justify-center">
                     <Bot className="w-6 h-6 text-white" />
@@ -177,7 +177,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white border-t py-12">
+      <footer className="bg-background border-t py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
