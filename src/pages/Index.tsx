@@ -55,8 +55,8 @@ const Index = () => {
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
+              <div className="flex flex-wrap gap-4">
+                <Button
                   onClick={() => navigate('/intake')}
                   size="lg"
                   className="bg-medical-blue hover:bg-medical-blue/90 text-lg px-8 py-6 rounded-xl"
@@ -64,13 +64,21 @@ const Index = () => {
                   <Bot className="w-5 h-5 mr-2" />
                   Commencer ma consultation
                 </Button>
-                <Button 
-                  variant="outline" 
+                <Button
                   size="lg"
+                  variant="outline"
                   className="text-lg px-8 py-6 rounded-xl border-medical-blue text-medical-blue hover:bg-medical-blue/5"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Appeler maintenant
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={() => navigate('/chat')}
+                  className="text-lg px-8 py-6 rounded-xl border-medical-green text-medical-blue hover:bg-medical-green/10"
+                >
+                  Book a walkthrough
                 </Button>
               </div>
 
